@@ -38,4 +38,7 @@ if __name__ == "__main__":
             print("%s - \"%s\"" % (g["id"], g["name"]))
     elif sys.argv[1] == "ghost_house":
         diff = datetime.date.today() - datetime.date(2019, 1, 23)
-        client.set_name(sys.argv[2], "Day %i in the Ghost House" % diff.days)
+        if 25 <= diff.days <= 29:
+            client.set_name(sys.argv[2], "Day %i in the Ghost House Cracker Barrel" % diff.days)
+        else:
+            client.set_name(sys.argv[2], "Day %i in the Ghost House" % diff.days)
