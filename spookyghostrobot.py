@@ -59,7 +59,6 @@ if __name__ == "__main__":
             client.set_name(sys.argv[2], "Day %i in the Ghost House ER" % diff.days)
         else:
             client.set_name(sys.argv[2], "Day %i in the Ghost House" % diff.days)
-        client.post_message(sys.argv[2], "Ohh shiiiiiiiit! \U0001F47B \U0001F916")
     elif sys.argv[1] == "post_message":
         client.post_message(sys.argv[2], sys.argv[3])
     else:
