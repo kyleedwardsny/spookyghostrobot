@@ -52,13 +52,8 @@ if __name__ == "__main__":
         for g in groups:
             print("%s - \"%s\"" % (g["id"], g["name"]))
     elif sys.argv[1] == "ghost_house":
-        diff = datetime.date.today() - datetime.date(2019, 1, 23)
-        if 25 <= diff.days <= 29:
-            client.set_name(sys.argv[2], "Day %i in the Ghost House Cracker Barrel" % diff.days)
-        elif 35 <= diff.days <= 39:
-            client.set_name(sys.argv[2], "Day %i in the Ghost House ER" % diff.days)
-        else:
-            client.set_name(sys.argv[2], "Day %i in the Ghost House" % diff.days)
+        diff = datetime.date.today() - datetime.date(2020, 3, 12)
+        client.set_name(sys.argv[2], "Day %i in Quarantine" % diff.days)
     elif sys.argv[1] == "post_message":
         client.post_message(sys.argv[2], sys.argv[3])
     else:
